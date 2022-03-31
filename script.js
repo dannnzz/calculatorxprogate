@@ -1,9 +1,9 @@
-const numbers = document.querySelectorAll(".number");
-const operators = document.querySelectorAll(".operator");
-const calculatorScreen = document.querySelector('.calculator-screen');
-const equalSign = document.querySelector('.equal-sign');
-const clearScreen = document.querySelector('.all-clear');
-const decimal = document.querySelector('.decimal');
+const numbers = document.querySelectorAll(".number")
+const operators = document.querySelectorAll(".operator")
+const calculatorScreen = document.querySelector('.calculator-screen')
+const equalSign = document.querySelector('.equal-sign')
+const clearScreen = document.querySelector('.all-clear')
+const decimal = document.querySelector('.decimal')
 const percentage = document.querySelector('.percentage')
 
 // Menampilkan ke console
@@ -11,17 +11,17 @@ numbers.forEach(number => {
     number.addEventListener("click", (event) => {
         console.log(event.target.value)
     })
-});
+})
 
 // Menampilkan value
 const updateScreen = (number) => {
     calculatorScreen.value = number
 }
 
-let prevNumber = '';
-let calculationOperator = '';
+let prevNumber = ''
+let calculationOperator = ''
 let secondOperator = ''
-let currentNumber = '0';
+let currentNumber = '0'
 let tempNumber = ''
 let flagNumber = true
 let flagCalculate = false
@@ -143,15 +143,15 @@ equalSign.addEventListener("click", (event) => {
 
 // Fungsi menghapus semua isi variabel
 const clearAll = () => {
-    prevNumber = '';
-    calculationOperator = '';
-    currentNumber = '0';
+    prevNumber = ''
+    calculationOperator = ''
+    currentNumber = '0'
 }
 
 // Menampilkan hasil setelah dihapus
 clearScreen.addEventListener("click", () => {
-    clearAll();
-    updateScreen(currentNumber);
+    clearAll()
+    updateScreen(currentNumber)
     flagCalculate = false
 })
 
